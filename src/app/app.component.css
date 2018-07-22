@@ -1,3 +1,19 @@
-.nav-link {
-    text-transform: uppercase;
+:host /deep/ .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: darkorange;
+    height: 3px;
+}
+
+nav {
+    height: 49px;
+    background-color: white;
+    border-bottom: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+:host /deep/ .mat-tab-links {
+    height: 49px;
+}
+
+:host /deep/ .mat-tab-link.mat-tab-label-active {
+    color: darkorange;
 }
