@@ -8,6 +8,7 @@ import { Contact } from '../shared';
 })
 export class ContactFormComponent implements OnInit {
   contact = {} as Contact;
+  isSubmited = false;
 
   constructor() { }
 
@@ -15,6 +16,9 @@ export class ContactFormComponent implements OnInit {
   }
 
   submitForm() {
-    console.log(this.contact);
+    // alert("This alert is open only to show form data. Form is not sending anything. Contact: " + JSON.stringify(this.contact));
+    // alert("This alert is open only to show form data. Form is not sending anything. Contact: " + JSON.stringify(this.contact));
+    
+    this.isSubmited = true;
   }
 }

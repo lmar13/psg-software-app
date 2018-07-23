@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent, ContactFormComponent, EmailFormatValidator } from './contact';
 import { CamsComponent, SkiCamsComponent } from './ski-cams';
-import { MatButtonModule, MatTabsModule, MatGridListModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatTabsModule, MatGridListModule, MatCardModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatButtonModule, MatTabsModule, MatGridListModule, MatCardModule } from
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule.forRoot(),
     HttpClientModule,
@@ -29,7 +31,9 @@ import { MatButtonModule, MatTabsModule, MatGridListModule, MatCardModule } from
     MatButtonModule,
     MatTabsModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

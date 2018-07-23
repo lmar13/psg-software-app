@@ -13,6 +13,8 @@ export class SkiCamsComponent implements OnInit {
 
   constructor(private skiCamsService: SkiCamsService) { }
 
+  currentDate = new Date();
+
   ngOnInit() {
     this.fetchSkiCams();
   }

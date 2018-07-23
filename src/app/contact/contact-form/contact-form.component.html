@@ -1,25 +1,42 @@
-<form id=formId (ngSubmit)="submitForm()" #contactForm="ngForm">
-    <div class="form-group">
-        <label for="contact-name">Name:</label>
-        <input type="text" #contactName="ngModel" [(ngModel)]="contact.name" [ngClass]="{ 'is-invalid': contactName.invalid && contactName.touched }" required class="form-control" name="contact-name" id="contact-name">
-        <div class="invalid-feedback">
-            Please provide valid name.
-        </div>
+<form (ngSubmit)="submitForm()" #contactForm="ngForm">
+
+    <!-- <div class="form-group"> -->
+    <div class="input-field col s12">
+    <!-- <label for="contact-name">Name:</label> -->
+    <!-- <input type="text" #contactName="ngModel" [(ngModel)]="contact.name" [ngClass]="{ 'is-invalid': contactName.invalid && contactName.touched }" required class="form-control" name="contact-name" id="contact-name"> -->
+    
+        <input type="text" #contactName="ngModel" [(ngModel)]="contact.name" [ngClass]="{ 'invalid': contactName.invalid && isSubmited }" required class="form-control" name="contact-name" id="contact-name">
+        <label for="contact-name">Name</label>
+        <span class="helper-text" data-error="Please provide valid name" data-success="right"></span>
+
     </div>
-    <div class="form-group">
-        <label for="contact-email">Email:</label>
-        <input type="email" #contactEmail="ngModel" [(ngModel)]="contact.email" appEmailFormat [ngClass]="{ 'is-invalid': contactEmail.invalid && contactEmail.touched }" required class="form-control" name="contact-email" id="contact-email">
-        <div class="invalid-feedback">
-            Please provide valid email address.
-        </div>
+
+    <!-- <div class="form-group"> -->
+    <div class="input-field col s12">
+    <!-- <label for="contact-email">Email:</label> -->
+    <!-- <input type="email" #contactEmail="ngModel" [(ngModel)]="contact.email" appEmailFormat [ngClass]="{ 'is-invalid': contactEmail.invalid && contactEmail.touched }" required class="form-control" name="contact-email" id="contact-email"> -->
+    
+        <input type="email" #contactEmail="ngModel" [(ngModel)]="contact.email" appEmailFormat [ngClass]="{ 'invalid': contactEmail.invalid && isSubmited }" required class="form-control" name="contact-email" id="contact-email">
+        <label for="contact-email">Email</label>
+        <span class="helper-text" data-error="Please provide valid email adress" data-success="right"></span>
     </div>
-    <div class="form-group">
-        <label for="contact-message">Message:</label>
-        <!-- <input type="text" #contactMessage="ngModel" [(ngModel)]="contact.message" required class="form-control" name="contact-message" id="contact-message"> -->
-        <textarea #contactMessage="ngModel" [(ngModel)]="contact.message" class="form-control" name="contact-message" id="contact-message"></textarea>
+
+    <!-- <div class="form-group"> -->
+    <div class="input-field col s12">
+    <!-- <label for="contact-message">Message:</label> -->
+    <!-- <input type="text" #contactMessage="ngModel" [(ngModel)]="contact.message" required class="form-control" name="contact-message" id="contact-message"> -->
+    <!-- <textarea #contactMessage="ngModel" [(ngModel)]="contact.message" class="form-control" name="contact-message" id="contact-message"></textarea> -->
+        
+        <textarea #contactMessage="ngModel" [(ngModel)]="contact.message" class="materialize-textarea" name="contact-message" id="contact-message" ></textarea>
+        <label for="textarea1">Message</label>
     </div>
-    <div class="form-group">
-        <button type="submit" [disabled]="!contactForm.form.valid" class="btn btn-success">Send</button>
-        <!-- <button type="submit" class="btn btn-success">Send</button> -->
+
+    <!-- <div class="form-group"> -->
+    <div class="input-field col s12">
+        
+        <!-- <button type="submit" [disabled]="!contactForm.form.valid" class="btn light-blue right">Send</button> -->
+        <button type="submit" class="btn light-blue right">Send</button>
+        <button type="reset" (click)="isSubmited = false" class="btn red right" [style.margin-right]="">Reset</button>
     </div>
+
 </form>

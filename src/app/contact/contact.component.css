@@ -1,0 +1,13 @@
+.centerDiv {
+    position: relative;
+    height: 200px;
+}
+
+mat-card {
+    width: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
