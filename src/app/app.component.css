@@ -21,3 +21,29 @@ a {
 :host /deep/ .mat-tab-link.mat-tab-label-active {
     color: darkorange;
 }
+
+footer {
+    background-color: #282828;
+    height: 100px;
+    color: #939393;
+    flex-shrink: 0;
+}
+
+footer span {
+    position: relative;
+    width: 20%;
+    top: 50%;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 2.8rem;
+}
+
+.activeSideLink {
+    color: red;
+}
+
+mat-sidenav {
+    width: 200px;
+}

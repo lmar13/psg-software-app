@@ -10,6 +10,7 @@ import { filter, map } from 'rxjs/operators';
 export class SkiCamsComponent implements OnInit {
   skiCams: SkiCams[] = [];
   cams: Cams[] = [];
+  loading = false;
 
   constructor(private skiCamsService: SkiCamsService) { }
 
@@ -33,6 +34,7 @@ export class SkiCamsComponent implements OnInit {
       })
     )
     .subscribe(skiCams => {
+      this.loading = true;
       this.skiCams = skiCams;
     });
   }

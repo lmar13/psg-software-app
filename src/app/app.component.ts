@@ -1,5 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { ThemePalette } from '@angular/material';
+import {
+  Event,
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router
+} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +16,7 @@ import { ThemePalette } from '@angular/material';
 })
 export class AppComponent {
   @Input() backgroundColor: ThemePalette;
+  sideNav = false;
 
   navLinks = [
     {
@@ -23,5 +32,5 @@ export class AppComponent {
       label: 'contact'
     }
   ];
-
 }
+
