@@ -1,17 +1,12 @@
-.centerDiv {
-    position: relative;
-    height: 200px;
-}
-
 mat-card {
-    width: 320px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 400px;
+    max-height: 408px;
+    margin: auto;
 }
 
 .row {
     margin-top: 40px;
+    height: calc(100vh - 345px);
+    display: flex;
+    align-items: center;
 }
